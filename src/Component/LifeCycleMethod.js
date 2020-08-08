@@ -12,7 +12,9 @@ class LifeCycleMethod extends Component{
         super(props);
         this.state={
             propsValue:'',
-            listValue:[{lifeCyecle:'Concept of Mounting.'},{lifeCyecle:'Concept of Updating.'},{lifeCyecle:'Concept of UnMounting.'},{lifeCyecle:'Concept of Error Handling.'}]
+            listValue:[{lifeCyecle:'constructor().',id:'M'},{lifeCyecle:'static getDerivedStateFromProps().',id:'M'},
+            {lifeCyecle:'componentDidMount().',id:'M'},{lifeCyecle:'render().',id:'M'},
+            ]
         }
     }
     static getDerivedStateFromProps(props){
@@ -30,13 +32,15 @@ class LifeCycleMethod extends Component{
       
         return(
             <>
-           <b style={{marginLeft:'44%',fontSize:'large'}}>Hi Prashant,Welcome to LifeCycle Method.</b><br/>
+           <b style={{fontSize:'large',color:'darksalmon'}}> Mount Phase</b>
+            <br/>
+            <b style={{fontSize:'large',color:'darkred'}}> Methods of Mount Phase</b>
             <br/>
             {
             this.state.listValue.length!== 0 && this.state.listValue.map((value,key) =>{
-            return  <li style={{marginLeft:'44%'}}>{key}-{value.lifeCyecle}</li>
+
+            return  value.id === "M" ? <li>{key+1}-{value.lifeCyecle}</li> : '';
             })
-            
             }
             </>
         )
