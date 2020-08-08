@@ -3,6 +3,7 @@ import { Grid, AppBar, Toolbar, Button } from '@material-ui/core';
 import FuncComponent from './Component/FunctionalComponent';
 import ClassComponent from './Component/ClassComponent';
 import FooterComp from './Component/FooterComponent';
+import LifeCycleComp from './Component/LifeCycleMethod';
 class TypesOfComponent extends Component {
 
     state = {
@@ -10,7 +11,7 @@ class TypesOfComponent extends Component {
         name1: 'Priyanka',
         nickName: '',
         nickName1: '',
-        heading:'React Concept Revision'
+        heading: 'React Concept Revision'
     }
     setNickName = (value) => {
         this.setState({ nickName1: value });
@@ -22,9 +23,9 @@ class TypesOfComponent extends Component {
         return (
             <>
                 <div>
-                   <h1 style={{textAlign:'center',color:'antiquewhite'}}> {this.state.heading}</h1> 
+                    <h1 style={{ textAlign: 'center', color: 'antiquewhite' }}> {this.state.heading}</h1>
                 </div>
-                <Grid container  justify="space-around">
+                <Grid container justify="space-around">
                     {/* Functional Component */}
                     <Grid item xs={5} sm={5} md={5} lg={5} xl={5}>
                         <AppBar position="static">
@@ -33,7 +34,7 @@ class TypesOfComponent extends Component {
                             </Toolbar>
                         </AppBar>
                         <FuncComponent name="Priyanka" nickName={this.setNickName} nickNameProps={this.state.nickName1}>
-                        </FuncComponent><br/>
+                        </FuncComponent><br />
                         <b style={{ color: 'lightsalmon' }}>Hi,<b style={{ color: 'lightseagreen' }}>{this.state.name1}</b> your nickname is <b style={{ color: 'black' }}>{this.state.nickName1}</b>.</b>
                         <FooterComp>
                             <Button style={{ backgroundColor: 'lightskyblue' }}>FunctButton1</Button>
@@ -57,6 +58,17 @@ class TypesOfComponent extends Component {
                             <Button style={{ backgroundColor: 'lightsalmon' }} onClick={this.btnAction}>ClassButton1</Button>
                             <Button style={{ backgroundColor: 'lightsalmon' }}>ClassButton2</Button>
                         </FooterComp>
+                    </Grid>
+                </Grid>
+                <br/>
+                <Grid container justify="center">
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <AppBar position="static">
+                            <Toolbar style={{ marginLeft: '45%' }}>
+                                Life Cycle Methods
+                            </Toolbar>
+                        </AppBar>
+                        <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp>
                     </Grid>
                 </Grid>
             </>

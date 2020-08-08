@@ -1,12 +1,31 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
+import React,{useState,useEffect} from 'react';
+import { Tooltip, Button } from '@material-ui/core';
 
-function functioCompo(props){
-   // props.nickName('Guddan');
+function FunctioCompo(props){
+  
+    const[name,setName] = useState('Priyanka Panjabi');
+    const[nickName,setNicName] = useState('Guddan');
+    const[value,setchangeValue] = useState('changeValue');
+    const[counter,setCounter] = useState(0);
+    //componentDidMount: second parameter will be constant.
+    //componentDidUpdate: 
+    useEffect(() =>{
+        console.log('inside use Effect');
+        console.log(counter);
+    });
+
+    const onCheckUseEffect = () =>{
+        setchangeValue('Prashant_UseEffect');
+        setCounter(counter+1);
+    }
+
     return(
         <>
-        <b style={{color:'lightsalmon'}}>Hi,<Tooltip title="use of props"><b style={{color:'white'}}>{props.name}</b></Tooltip>Welcome to Functional Component.</b>
+        <b style={{color:'lightsalmon'}}>Hi,<Tooltip title="use of props"><b style={{color:'white'}}>{props.name}</b></Tooltip>Welcome to Functional Component.</b><br/>
+       <Tooltip title="use of Hooks"><b style={{color:'black'}}>Hi,<b style={{color:'white'}}>{nickName}</b> your original name is <b style={{color:'white'}}>{name}</b></b></Tooltip>
+     <b>The previous value is {value} and update value is {value}</b><br/>
+        <Button onClick={onCheckUseEffect} style={{backgroundColor:'black',color:'white'}}> check useEffect</Button>
         </>
     )
 }
-export default functioCompo;
+export default FunctioCompo;
