@@ -4,6 +4,10 @@ import FuncComponent from './Component/FunctionalComponent';
 import ClassComponent from './Component/ClassComponent';
 import FooterComp from './Component/FooterComponent';
 import LifeCycleComp from './Component/LifeCycleMethod';
+import UpdateLifeCycleMethod from './Component/UpdateLifeCycle';
+import UnMountMethod from './Component/UnMount';
+import ErrorHandle from './Component/ErrorHandling';
+
 class TypesOfComponent extends Component {
 
     state = {
@@ -60,7 +64,7 @@ class TypesOfComponent extends Component {
                         </FooterComp>
                     </Grid>
                 </Grid>
-                <br/>
+                <br />
                 <Grid container justify="center">
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <AppBar position="static">
@@ -68,7 +72,23 @@ class TypesOfComponent extends Component {
                                 Life Cycle Methods
                             </Toolbar>
                         </AppBar>
-                        <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp>
+                        <Grid container justify="center">
+                            <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                            <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp>
+                            </Grid>
+                            <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                            <UpdateLifeCycleMethod/>
+                            </Grid>
+                            <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                            <UnMountMethod/>
+                            {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
+                            </Grid>
+                            <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                            <ErrorHandle/>
+                            {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
+                            </Grid>
+                        </Grid>
+                        
                     </Grid>
                 </Grid>
             </>
