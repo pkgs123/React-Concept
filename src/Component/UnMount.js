@@ -7,6 +7,7 @@ class UnMount extends Component{
         }
     }
     componentWillUnmount(){
+        alert('Unmounting....')
         console.log('componentWillUnmount is called.');
     }
     render(){
