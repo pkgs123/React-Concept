@@ -7,7 +7,8 @@ import LifeCycleComp from './Component/LifeCycleMethod';
 import UpdateLifeCycleMethod from './Component/UpdateLifeCycle';
 import UnMountMethod from './Component/UnMount';
 import ErrorHandle from './Component/ErrorHandling';
-
+import RefsComponent from './Component/RefsComponent';
+import RefsWithFunction from './Component/RefswithFunctionComponent';
 class TypesOfComponent extends Component {
 
     state = {
@@ -88,7 +89,19 @@ class TypesOfComponent extends Component {
                             {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
                             </Grid>
                         </Grid>
-                        
+                        <Grid container justify="center">
+                            <AppBar position="static">
+                                <Toolbar style={{marginLeft:'45%'}}>
+                                    Concept of Refs
+                                </Toolbar>
+                            </AppBar>
+                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6} >
+                            <RefsComponent/>
+                            </Grid>
+                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                          <RefsWithFunction/>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </>
