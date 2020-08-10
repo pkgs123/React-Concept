@@ -6,7 +6,7 @@ class UpdateLifeCycleMethod extends Component {
         super(props);
         this.state = {
             title:'Update Phase',
-            ind:'y',
+            ind:'x',
             listvalue: [{ lifeCyecle: 'static getDerivedStateFromProps().', id: 'U' }, { lifeCyecle: 'shouldComponentUpdate().', id: 'U' },
             { lifeCyecle: 'render().', id: 'U' },
             { lifeCyecle: 'getSnapshotBeforeUpdate().', id: 'U' }, { lifeCyecle: 'componentDidUpdate().', id: 'U' }]
@@ -38,10 +38,10 @@ class UpdateLifeCycleMethod extends Component {
         //whenever any changes occurs then this method is called to update tha changes on to screen.
         return (
             <>
-                {this.state.ind === "X" ? <b style={{ fontSize: 'large', color: 'darksalmon' }}> {this.state.title}</b>
-                :<unMount></unMount>
+               <b style={{ fontSize: 'large', color: 'darksalmon' }}> {this.state.title}</b>
+                {/* // :<unMount></unMount>
 
-                }
+                //} */}
                 <br />
                 <b style={{ fontSize: 'large', color: 'darkred' }}> Methods of Update Phase</b>
                 <br />
