@@ -9,6 +9,7 @@ import UnMountMethod from './Component/UnMount';
 import ErrorHandle from './Component/ErrorHandling';
 import RefsComponent from './Component/RefsComponent';
 import RefsWithFunction from './Component/RefswithFunctionComponent';
+import AxiosComponent from './Component/AxiosComponent';
 class TypesOfComponent extends Component {
 
     state = {
@@ -28,7 +29,7 @@ class TypesOfComponent extends Component {
         return (
             <>
                 <div>
-                    <h1 style={{ textAlign: 'center', color: 'antiquewhite' }}> {this.state.heading}</h1>
+                    <h1 style={{ textAlign: 'center', color: 'black' }}> {this.state.heading}</h1>
                 </div>
                 <Grid container justify="space-around">
                     {/* Functional Component */}
@@ -100,6 +101,19 @@ class TypesOfComponent extends Component {
                             </Grid>
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                           <RefsWithFunction/>
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <AppBar position="static">
+                                <Toolbar style={{marginLeft:'45%'}}>
+                                    Use of Axios NPM Package
+                                </Toolbar>
+                            </AppBar>
+                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                            <AxiosComponent/>
+                            </Grid>
+                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+
                             </Grid>
                         </Grid>
                     </Grid>
