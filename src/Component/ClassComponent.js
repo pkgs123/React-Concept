@@ -15,7 +15,7 @@ class ClassComp extends Component{
     render(){
         return(
             <>
-            <b style={{color:'lightgreen'}}>Hi,<Tooltip title="Use of Props"><b style={{color:'white'}}>{this.props.name}</b></Tooltip>Welcome to Class Component.</b><br/>
+            <b style={{color:'lightgreen'}}>Hi,<Tooltip title="Use of Props"><b style={{color:'black'}}>{this.props.name}</b></Tooltip>Welcome to Class Component.</b><br/>
            <b style={{color:'lightgreen'}}>Hi,<Tooltip title="Use of state"><b style={{color:'black'}}>{this.state.name}</b></Tooltip>Welcome to <b style={{color:'black'}}>{this.state.language}</b> Class Component</b>
             </>
         )
