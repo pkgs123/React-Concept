@@ -11,6 +11,7 @@ import RefsComponent from './Component/RefsComponent';
 import RefsWithFunction from './Component/RefswithFunctionComponent';
 import AxiosComponent from './Component/AxiosComponent';
 import ReduxComponent from './Component/ReduxComponent';
+import MiddlewareThunk from './Component/MiddlewareThunk';
 class TypesOfComponent extends Component {
 
     state = {
@@ -77,41 +78,41 @@ class TypesOfComponent extends Component {
                         </AppBar>
                         <Grid container justify="center">
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                            <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp>
+                                <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp>
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                            <UpdateLifeCycleMethod/>
+                                <UpdateLifeCycleMethod />
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                            <UnMountMethod/>
-                            {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
+                                <UnMountMethod />
+                                {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
-                            <ErrorHandle/>
-                            {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
+                                <ErrorHandle />
+                                {/* <LifeCycleComp propsValue="LifeCycleMount(getDerivedStateFromProps)"></LifeCycleComp> */}
                             </Grid>
                         </Grid>
                         <Grid container justify="center">
                             <AppBar position="static">
-                                <Toolbar style={{marginLeft:'45%'}}>
+                                <Toolbar style={{ marginLeft: '45%' }}>
                                     Concept of Refs
                                 </Toolbar>
                             </AppBar>
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6} >
-                            <RefsComponent/>
+                                <RefsComponent />
                             </Grid>
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                          <RefsWithFunction/>
+                                <RefsWithFunction />
                             </Grid>
                         </Grid>
                         <Grid container>
                             <AppBar position="static">
-                                <Toolbar style={{marginLeft:'45%'}}>
+                                <Toolbar style={{ marginLeft: '45%' }}>
                                     Use of Axios NPM Package
                                 </Toolbar>
                             </AppBar>
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                            <AxiosComponent/>
+                                <AxiosComponent />
                             </Grid>
                             {/* <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                             <AppBar position="static">
@@ -123,13 +124,23 @@ class TypesOfComponent extends Component {
                             </Grid> */}
                         </Grid>
                         <Grid container>
-                        <AppBar position="static">
-                                <Toolbar style={{marginLeft:'45%'}}>
+                            <AppBar position="static">
+                                <Toolbar style={{ marginLeft: '45%' }}>
                                     Use of Redux
                                 </Toolbar>
                             </AppBar>
                             <Grid item>
-                            <ReduxComponent/>
+                                <ReduxComponent />
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <AppBar position="static" >
+                                <Toolbar style={{ marginLeft: '45%' }}>
+                                    Use of Redux-Thunk
+                                </Toolbar>
+                            </AppBar>
+                            <Grid item>
+                                <MiddlewareThunk/>
                             </Grid>
                         </Grid>
                     </Grid>
