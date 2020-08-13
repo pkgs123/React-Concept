@@ -1,3 +1,4 @@
+import axios from 'axios';
 
 const empDetailsAction = (data) =>{
     return{
@@ -15,4 +16,20 @@ const empProfessionDetailsAction = (compName,exp) =>{
         }
     }
 }
-export {empDetailsAction,empProfessionDetailsAction};
+
+const reduxThunkAction =  () =>{
+
+    let path = 'https://jsonplaceholder.typicode.com/photos';
+
+    return async (dispatch) =>{
+
+        let response = await axios.get(path,{headers:{},params:{}})
+
+        dispatch({
+            type:'REDUX_THUNK_DATA',
+            payload:response.data
+        })
+    }
+
+}
+export {empDetailsAction,empProfessionDetailsAction,reduxThunkAction};
