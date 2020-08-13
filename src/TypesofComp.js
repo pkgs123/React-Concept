@@ -10,6 +10,7 @@ import ErrorHandle from './Component/ErrorHandling';
 import RefsComponent from './Component/RefsComponent';
 import RefsWithFunction from './Component/RefswithFunctionComponent';
 import AxiosComponent from './Component/AxiosComponent';
+import ReduxComponent from './Component/ReduxComponent';
 class TypesOfComponent extends Component {
 
     state = {
@@ -112,8 +113,23 @@ class TypesOfComponent extends Component {
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                             <AxiosComponent/>
                             </Grid>
-                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-
+                            {/* <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                            <AppBar position="static">
+                                <Toolbar>
+                                    Use of Redux
+                                </Toolbar>
+                            </AppBar>
+                            <ReduxComponent/>
+                            </Grid> */}
+                        </Grid>
+                        <Grid container>
+                        <AppBar position="static">
+                                <Toolbar style={{marginLeft:'45%'}}>
+                                    Use of Redux
+                                </Toolbar>
+                            </AppBar>
+                            <Grid item>
+                            <ReduxComponent/>
                             </Grid>
                         </Grid>
                     </Grid>
