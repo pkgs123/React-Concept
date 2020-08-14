@@ -12,6 +12,9 @@ import RefsWithFunction from './Component/RefswithFunctionComponent';
 import AxiosComponent from './Component/AxiosComponent';
 import ReduxComponent from './Component/ReduxComponent';
 import MiddlewareThunk from './Component/MiddlewareThunk';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import{Link} from 'react-router-dom';
+import history from './History';
 class TypesOfComponent extends Component {
 
     state = {
@@ -27,7 +30,13 @@ class TypesOfComponent extends Component {
 
     btnAction = () => {
     }
+
+    onCheckHistoryRouter = () =>{
+        console.log("HistoryObjet",history);
+        history.push('/historyComp');
+    }
     render() {
+       let id = 1;
         return (
             <>
                 <div>
@@ -140,7 +149,29 @@ class TypesOfComponent extends Component {
                                 </Toolbar>
                             </AppBar>
                             <Grid item>
-                                <MiddlewareThunk/>
+                                <MiddlewareThunk />
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <AppBar position="static">
+                            <Toolbar style={{marginLeft:'45%'}}>
+                                Use of Routing
+                            </Toolbar>
+                            </AppBar>
+                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                <Link to={`/secondPage/${id}`}>
+                                <ArrowForwardIcon></ArrowForwardIcon>
+                                </Link>
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <AppBar position="static">
+                                <Toolbar style={{marginLeft:'45%'}}>
+                                    Use of History router(Intentional Routing)
+                                </Toolbar>
+                            </AppBar>
+                            <Grid item>
+                        <Button onClick={this.onCheckHistoryRouter} style={{backgroundColor:'black',color:'white'}}>{`History`}</Button>
                             </Grid>
                         </Grid>
                     </Grid>
